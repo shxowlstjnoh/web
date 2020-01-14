@@ -4,44 +4,7 @@
   <title>WEB2 - JavaScript</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
-  <script>
-    var Links = {
-      setColor : function (color) {
-        var i = 0;
-        var alist = document.querySelectorAll('a');
-        while (i < alist.length) {
-          alist[i].style.color = color;
-          i++;
-        }
-      }
-    }
-
-    var Body = {
-      setColor : function (color) {
-        document.querySelector('body').style.color = color;
-      },
-      setBackgroundColor : function (color) {
-        document.querySelector('body').style.backgroundColor = color;
-      }
-    }
-
-    function nightDayHandler(self) {
-      var target = document.querySelector('body');
-
-      if(self.value === 'night') {
-        Body.setBackgroundColor('black');
-        Body.setColor('white');
-        self.value = 'day';
-        Links.setColor('powderblue');
-
-      } else {
-        Body.setBackgroundColor('white');
-        Body.setColor('black');
-        self.value = 'night';
-        Links.setColor('blue');
-      }
-    }
-  </script>
+  <script src="colors.js"></script>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
@@ -52,8 +15,6 @@
       <li><a href="3.html">JavaScript</a></li>
     </ol>
     <div id="article">
-      <input type="button" value="night"
-      onclick="nightDayHandler(this)">
       <input type="button" value="night"
       onclick="nightDayHandler(this)">
       <h2>JavaScript</h2>
